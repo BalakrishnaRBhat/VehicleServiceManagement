@@ -1,0 +1,50 @@
+{% include 'base.html' %}
+{% include 'ser_dash.html' %}
+{% block content %}
+<style>
+    .container{
+        margin-top: 50px;
+    }
+</style>
+<body>
+    <div class="jumbotron text-center">
+        <h1>My Services</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Service_id</th>
+                <th scope="col">CustomerName</th>
+                <th scope="col">CustomerPhone</th>
+                <th scope="col">CustomerAddress</th>
+                <th scope="col">VehicleRegNo</th>
+                <th scope="col">VehicleName</th>
+                <th scope="col">VehicleType</th>
+                <th scope="col">ServiceType</th>
+                <th scope="col">ServiceDescription</th>
+                <th scope="col">ServiceStatus</th>
+            </tr>
+        </thead>
+        {% for u,v in zipped %}
+        <tbody>
+            <tr>
+                <td>{{v.service.id}}</td>
+                <td>{{u.first_name}}</td>
+                <td>{{u.cust_phone}}</td>
+                <td>{{u.address}}</td>
+                <td>{{v.vehicle_reg_no}}</td>
+                <td>{{v.vehicle_name}}</td>
+                <td>{{v.vehicle_type}}</td>
+                <td>{{v.service.type_of_service}}</td>
+                <td>{{v.service.service_desc}}</td>
+                <td>{{v.service.ser_status}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="jumbotron text-center">
+        <a class="btn btn-primary btn-lg" href="{% url 'update-status' %}" role="button">Update Status</a>
+    </div>
+
+</body>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% include 'base.html' %}
+{% include 'home.html' %}
+
+{% block content %}
+<div class="jumbotron">
+        <h1 class="display-4">REGISTER HERE:</h1>
+        <a class="btn btn-primary btn-lg" href="{% url 'cust-reg' %}" role="button">Customer Register</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'ser-reg' %}" role="button">Service Centre Register</a>
+
+</div>
+{% endblock %}

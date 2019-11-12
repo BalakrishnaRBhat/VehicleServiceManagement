@@ -1,0 +1,19 @@
+{% include 'base.html' %}
+{% include 'home.html' %}
+{% block content %}
+<div style="margin:0 auto;width:75%;text-align:left">
+    
+        <form action="{% url 'cust-log' %}" method="POST" style="width:500px;margin:auto">
+            <div class="form-group">
+            {% csrf_token %}
+            <h2 class="form-signin-heading">Customer Login:</h2>
+            {{cust_log.as_p}}
+            <button type="submit" class="btn btn-success">Login</button>
+            {{msg}}
+            </div>
+        </form>
+</div>
+
+
+
+{% endblock %}

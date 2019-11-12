@@ -1,0 +1,18 @@
+{% include 'base.html' %}
+{% include 'ser_dash.html' %}
+
+{% block content %}
+<div class="container">
+        <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                        <form action="card"></form>
+                        <h1>My Profile</h1>
+                        <p>Username: {{user}}</p>
+                        <p>ServiceStation Name: {{user.servicestation.station_name}}</p>
+                        <p>Email: {{user.servicestation.email}}</p>
+                        <p>Phone no: {{user.servicestation.ss_phone}}</p>
+                        <p>Address: {{user.servicestation.address}}</p>
+                    </form>
+              </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% include 'base.html' %}
+{% include 'cust_dash.html' %}
+
+{% block content %}
+<div class="container">
+        <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                        <form action="card"></form>
+                        <h1>My Profile</h1>
+                        <p>Username: {{user}}</p>
+                        <p>Firstname: {{user.customer.first_name}}</p>
+                        <p>Lastname: {{user.customer.last_name}}</p>
+                        <p>Email: {{user.customer.email}}</p>
+                        <p>Phone no: {{user.customer.cust_phone}}</p>
+                        <p>Address: {{user.customer.address}}</p>
+                    </form>
+              </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% include 'base.html' %}
+{% block body %}
+<body style="background-color: darkgray;">
+
+<nav class="navbar navbar-expand-lg" style="background-color: dimgray;">
+    <a class="navbar-brand" href="#" style="font-weight: bold;"> Vehicle Doctor </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{% url 'cust-dash' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'cust-profile' %}">MyProfile</a>
+        <a class="nav-item nav-link" href="{% url 'create-booking' %}">BookService</a>
+        <a class="nav-item nav-link" href="{% url 'bookings-view' %}">My Bookings</a>
+        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
+      </div>
+    </div>
+  </nav>
+</body>
+{% endblock %}

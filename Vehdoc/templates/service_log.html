@@ -1,0 +1,18 @@
+{% include 'base.html' %}
+{% include 'home.html' %}
+
+{% block content %}
+<div style="margin:0 auto;width:75%;text-align:left">
+        <form action="{% url 'ser-log' %}" method="POST" style="width:500px;margin:auto">
+            <div class="form-group">
+            {% csrf_token %}
+            <h2 class="form-signin-heading">ServiceStation Login:</h2>
+            {{ser_log.as_p}}
+            <button type="submit" class="btn btn-success">Login</button>
+            {{msg}}
+            </div>
+        </form>
+</div>
+
+
+{% endblock %}
