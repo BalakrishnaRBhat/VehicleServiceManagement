@@ -74,14 +74,15 @@ WSGI_APPLICATION = 'VehicleServiceManagement.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+#Database Connection
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database_name',
-        'USER': 'username',
-        'PASSWORD': 'password',
+        'NAME': 'veh',
+        'USER': 'krishna',
+        'PASSWORD': 'brb',
         'HOST': 'localhost',
-        'PORT': 'port-no'
+        'PORT': '5432'
     }
 }
 
