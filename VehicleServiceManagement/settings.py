@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'VehicleServiceManagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database_name',
-        'USER': 'username',
-        'PASSWORD':'password',
+        'NAME': 'veh',
+        'USER': 'krishna',
+        'PASSWORD':'brb',
         'HOST': 'localhost',
-        'PORT': 'port_no'
+        'PORT': '5432'
     }
 }
 
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
+#Time zone for India
 TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True

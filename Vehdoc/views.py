@@ -8,7 +8,7 @@ from .models import ServiceStation,Service,Customer,Vehicle
 from .forms import (CustomerRegistrationForm,
 CustomerInfoForm,ServiceStationRegistrationForm,ServiceStationInfoForm,ServiceStationLoginForm,CustomerLoginForm,VBooking)
 
-# Create your views here.
+
 def home(request):
     return render(request,'home.html')
 def register(request):
@@ -200,6 +200,7 @@ def booking(request):
         'form':form
     }
     return render(request,'create_booking.html',context)
+#bookings view for customer 
 def bookings_view(request):
         cust = request.user.customer
         booking_list = Vehicle.objects.bookings(cust)
@@ -209,7 +210,7 @@ def bookings_view(request):
             'service_list': service_list
         }
         return render(request,'bookings_view.html',context)
-
+# service view for service station
 def service_view(request):
     user = Customer.objects.all()
     veh = Vehicle.objects.all()
@@ -218,6 +219,8 @@ def service_view(request):
         'zipped': zipped_data
     }
     return render(request,'service_view.html',context)
+
+# status udpattion procedure call for updating status of service 
 def udpate_status(request):
     if request.method == 'POST':
         service_id = int(request.POST['service_id'])
