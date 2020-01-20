@@ -1,0 +1,52 @@
+Code for set start date trigger:
+
+create or replace function set_start_date()
+returns trigger as 
+$body$
+begin
+if new.start_date is null then
+new.start_date = current_timestamp
+end if;
+return new
+end;
+$body$ language plpgsql;
+
+create trigger start_date_set
+before insert
+on public."Vehdoc_service"
+for each row 
+execute procedure set_start_date();
+
+Code for update status procedure:
+
+create or replace procedure update_status(service_id int,status varchar)
+language plpgsql
+as $$
+begin
+update public."Vehdoc_service"
+set ser_status = status
+where id = service_id;
+commit;
+end;
+$$;
+
+Code for finish date set trigger:
+
+create or replace function set_finish()
+returns trigger as 
+$$
+begin
+if new.ser_status = 'Completed' then
+new.finish_date = current_timestamp;
+end if;
+return new;
+end;
+$$ language plpgsql;
+
+create trigger set_finish
+before update on public."Vehdoc_service"
+for each row 
+execute procedure set_finish()
+
+
+
