@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'VehicleServiceManagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database_name',
-        'USER': 'username',
-        'PASSWORD':'password',
+        'NAME': 'veh',
+        'USER': 'krishna',
+        'PASSWORD':'brb',
         'HOST': 'localhost',
         'PORT': '5432'
     }

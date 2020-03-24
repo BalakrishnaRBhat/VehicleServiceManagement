@@ -25,19 +25,19 @@
                 <th scope="col">ServiceStatus</th>
             </tr>
         </thead>
-        {% for u,v in zipped %}
+        {% for s in ser %}
         <tbody>
             <tr>
-                <td>{{v.service.id}}</td>
-                <td>{{u.first_name}}</td>
-                <td>{{u.cust_phone}}</td>
-                <td>{{u.address}}</td>
-                <td>{{v.vehicle_reg_no}}</td>
-                <td>{{v.vehicle_name}}</td>
-                <td>{{v.vehicle_type}}</td>
-                <td>{{v.service.type_of_service}}</td>
-                <td>{{v.service.service_desc}}</td>
-                <td>{{v.service.ser_status}}</td>
+                <td>{{s.id}}</td>
+                <td>{{s.ss.first_name}}</td>
+                <td>{{s.ss.cust_phone}}</td>
+                <td>{{s.ss.address}}</td>
+                <td>{{s.veh.vehicle_reg_no}}</td>
+                <td>{{s.veh.vehicle_name}}</td>
+                <td>{{s.veh.vehicle_type}}</td>
+                <td>{{s.type_of_service}}</td>
+                <td>{{s.service_desc}}</td>
+                <td>{{s.ser_status}}</td>
             </tr>
             {% endfor %}
         </tbody>

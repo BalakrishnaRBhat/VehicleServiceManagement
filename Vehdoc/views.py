@@ -212,11 +212,9 @@ def bookings_view(request):
         return render(request,'bookings_view.html',context)
 # service view for service station
 def service_view(request):
-    user = Customer.objects.all()
-    veh = Vehicle.objects.all()
-    zipped_data = zip(user,veh)
+    ser = Service.objects.all()
     context = {
-        'zipped': zipped_data
+        'ser': ser
     }
     return render(request,'service_view.html',context)
 
