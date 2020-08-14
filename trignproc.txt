@@ -5,7 +5,7 @@ returns trigger as
 $body$
 begin
 if new.start_date is null then
-new.start_date = current_timestamp
+new.start_date = current_timestamp;
 end if;
 return new
 end;
@@ -46,7 +46,7 @@ $$ language plpgsql;
 create trigger set_finish
 before update on public."Vehdoc_service"
 for each row 
-execute procedure set_finish()
+execute procedure set_finish();
 
 
 
