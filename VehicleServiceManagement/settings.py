@@ -11,9 +11,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l(o$gl_bqv8+0b@%rn*-mm6-nknj^r3!t_i(h7q!$$+ke%8ucg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://vehicle-doctor.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
@@ -67,9 +67,9 @@ WSGI_APPLICATION = 'VehicleServiceManagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database-name',
-        'USER': 'username',
-        'PASSWORD':'password',
+        'NAME': 'veh',
+        'USER': 'krishna',
+        'PASSWORD':'brb',
         'HOST': 'localhost',
         'PORT': '5432'
     }
