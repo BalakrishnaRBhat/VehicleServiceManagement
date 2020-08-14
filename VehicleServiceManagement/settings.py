@@ -13,8 +13,8 @@ SECRET_KEY = 'l(o$gl_bqv8+0b@%rn*-mm6-nknj^r3!t_i(h7q!$$+ke%8ucg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://vehicle-doctor.herokuapp.com/','127.0.0.1']
-
+# ALLOWED_HOSTS = ['https://vehicle-doctor.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
