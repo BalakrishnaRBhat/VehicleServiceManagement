@@ -1,5 +1,5 @@
 ﻿asgiref==3.3.4
-Django==3.2.5
+Django==3.2.13
 django-bootstrap==0.2.4
 psycopg2==2.8.6
 python-decouple==3.3
